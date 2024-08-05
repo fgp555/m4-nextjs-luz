@@ -51,7 +51,7 @@ const Login: React.FC = () => {
             });
             router.push(Pathroutes.DASHBOARD)
         } catch (error: any) {
-            toast.error("Login failed", {
+            toast.error(error.message, {
                 position: "bottom-right",
                 style: { backgroundColor: "red", color: "white" },
             });

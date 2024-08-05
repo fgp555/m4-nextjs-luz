@@ -14,10 +14,11 @@ export const RegisterUser = async (userData: IRegister) => {
         if(res.ok){
             return res.json()
         }else {
-            throw new Error ("User creation error")
+            const errorData = await res.json();
+            throw new Error(errorData.message || "User creation error");
         }
     } catch (error: any) {
-        throw new Error(error)
+        throw new Error(error.message || error);
     }
 }
 
@@ -33,9 +34,10 @@ export const LoginUser = async (userData: ILogin) => {
         if(res.ok){
             return res.json()
         }else {
-            throw new Error ("Error logging in")
+            const errorData = await res.json();
+            throw new Error(errorData.message || "Error logging in");
         }
     } catch (error: any) {
-        throw new Error(error)
+        throw new Error(error.message || error);
     }
 }

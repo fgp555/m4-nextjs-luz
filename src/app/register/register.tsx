@@ -47,7 +47,7 @@ const Register: React.FC = () => {
             });
             router.push(Pathroutes.LOGIN)
         } catch (error: any) {
-            toast.error("Registration failed", {
+            toast.error(error.message || "Registration failed", {
                 position: "bottom-right",
                 style: { backgroundColor: "red", color: "white" }
             });
