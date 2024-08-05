@@ -1,0 +1,29 @@
+ .topBar {
+    width: 100%;
+    background-color: #999999;
+    padding: 5px 0;
+    text-align: center;
+  }
+  
+  .discountTextContainer {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .discountText {
+    font-size: 0.9rem;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: scroll 60s linear infinite; /* Ajustes en la duración y control de la animación */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

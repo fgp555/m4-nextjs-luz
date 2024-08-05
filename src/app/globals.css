@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer utilities {
+    .custom-navbar {
+        @apply p-2 py-2 md:px-3 text-left border-b-2 md:border-b-0 hover:bg-grey-0 md:hover:text-red-900 md:hover:bg-transparent;
+      }
+
+    .custom-inputs {
+        @apply text-black w-full pl-4 pr-4 py-2 rounded-full bg-gray-50 focus:bg-white focus:outline-none
+    }
+      
+  }
+  
+
+body {
+    background-color: black;
+    margin: 0;
+    color: white;
+    margin: 0px;
+    font-family: sans-serif;
+}
